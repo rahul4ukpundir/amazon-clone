@@ -1,0 +1,35 @@
+.singleProduct{
+    padding: 10px;;
+}
+
+.singleProduct>img{
+   height: 30vh;
+   object-fit: contain;
+}
+.product_sumary{
+    font-size: 12px;
+    margin-left:5px;
+}
+.product_sumary>h4{
+    font-weight: 400;
+}
+
+.btn-cart{
+    margin-top: 5px;;
+    background-color: rgba(0, 0, 255, 0.49);
+    border:none;
+    color:white;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.btn-disable
+        {
+        cursor: not-allowed;
+        pointer-events: none;
+
+        /*Button disabled - CSS color class*/
+        color: #c0c0c0;
+        background-color: #ffffff;
+
+        }

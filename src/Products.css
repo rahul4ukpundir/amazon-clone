@@ -1,0 +1,9 @@
+.products{
+    flex: .9;
+    background-color: lightgray;
+    display: flex;
+    flex-wrap: wrap;
+    height: 90vh;
+    overflow-y: scroll;
+
+}
