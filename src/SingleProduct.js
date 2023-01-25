@@ -5,14 +5,14 @@ import "./SingleProduct.css";
 
 const SingleProduct = (props) => {
   const btntext = props.inStock > 0 ? "Add to cart" : "Out of stock";
-  const [{ carts }, dispatch] = useDataLayerValue();
-
+  const { productState: {carts},dispatch } = useDataLayerValue();
   return (
     <div className='singleProduct'>
       <img src={props.imageUrl} />
       <div className='product_sumary'>
         <h4>{props.name}</h4>
         <p>Price: {props.price}</p>
+        <p>{props.fastDelivery? "Fast Delivery": ""}</p>
         <p><Ratings rating={props.ratings} /></p>
 
         {

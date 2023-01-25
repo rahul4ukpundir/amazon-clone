@@ -5,7 +5,7 @@ import { useDataLayerValue } from './MockData/DataLayer/DataLayer';
 import Rating from "./Ratings";
 
 const Carts = () => {
-    const [{ carts }, dispatch] = useDataLayerValue();
+    const { productState: {carts}, dispatch } = useDataLayerValue();
     return (
      <div className='carts'>
         <div className='carts__left__container'>

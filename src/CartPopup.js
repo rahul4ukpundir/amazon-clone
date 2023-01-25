@@ -5,7 +5,7 @@ import { AiFillDelete } from "@react-icons/all-files/ai/AiFillDelete";
 import { MdCancel } from "@react-icons/all-files/md/MdCancel";
 import { Link } from 'react-router-dom';
 const CartPopup = ({ onClick }) => {
-    const [{ carts }, dispatch] = useDataLayerValue();
+    const { productState: {carts},dispatch } = useDataLayerValue();
     return (
         <div className='cartPopup'>
             <span className='cancebutton' onClick={() => onClick()}><MdCancel /></span>

@@ -1,6 +1,6 @@
 
 export const filterInitialState = {
-    sort: false, // if true then decending
+    sort: '', // if true then decending
     byStock: false,
     fastdevelivery: false,
     byRating: 0,
@@ -30,7 +30,7 @@ export const filterReducer = (state, action) => {
                 ...state,
                 byRating: action.payload
             }
-        case 'FILTER_BY_RATING':
+        case 'FILTER_BY_SEARCH':
             return {
                 ...state,
                 searchQuery: action.payload

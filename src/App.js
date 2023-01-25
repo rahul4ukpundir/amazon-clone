@@ -6,9 +6,8 @@ import Sidbar from './Sidbar';
 import Products from './Products';
 import { BrowserRouter as Router, Routes, Route, BrowserRouter } from "react-router-dom"
 import Carts from './Carts';
-
+import { useDataLayerValue } from './MockData/DataLayer/DataLayer';
 function App() {
-
   return (
     <BrowserRouter>
       <Routes>
