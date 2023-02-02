@@ -1,0 +1,103 @@
+.login__container{
+    display: grid;
+    place-items: center;
+    margin-top: 10%;
+}
+
+.login__container>img{
+
+    object-fit: contain;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.login{
+    border: 1px solid lightgray;
+    width: 300px;
+    padding:20px;
+   height: fit-content;
+   border-radius: 5px;
+}
+
+.login>h2{
+    margin-bottom: 10px;
+}
+
+.row{
+
+    margin-bottom: 20px;
+}
+
+.row>input{
+    height: 20px;
+    width: 90%;
+}
+
+.btn_signIn{
+    width: 100%;
+    background-color: #f0c14b;
+    border: 1px solid;
+    font-weight: 500;
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 20px;
+
+}
+
+.registration_button{
+    margin-top: 10px;
+}
+
+.registration_button>button{
+    border-color: darkgray;
+    width: 100%;
+    border: 1px solid;
+    height: 30px;
+    border-radius: 2px;
+}
+
+.validation{
+    color:red;
+    font-size: 12px;
+}
+
+.social__medial__login{
+    display: flex;
+    flex-direction: column;
+}
+
+.social__medial__siginin{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f0c14b;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding:5px;
+    width:100%;
+    cursor: pointer;
+}
+
+.social__medial__siginin>img{
+    height: 30px;
+    object-fit: contain;
+    margin-left:50px;
+    
+}
+
+.social__medial__siginin>button{
+    flex: 1;
+    border:none;
+    background-color: #f0c14b;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: left;
+    margin-left:10px;
+}
+
+.or{
+    display: grid;
+    place-items: center;
+    font-weight: 600;
+
+}

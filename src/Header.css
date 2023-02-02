@@ -66,3 +66,14 @@
     font-weight: 800;
     cursor: pointer;
 }
+
+.logout__section{
+    display: flex;
+    align-items: center;
+    color:black
+}
+
+.logout__section>h2{
+    font-size: 12px;
+    margin-right: 10px;
+}

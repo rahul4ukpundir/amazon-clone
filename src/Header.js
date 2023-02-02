@@ -5,11 +5,14 @@ import { BsSearch } from "@react-icons/all-files/bs/BsSearch"
 import { AiOutlineShoppingCart } from "@react-icons/all-files/ai/AiOutlineShoppingCart"
 import { useDataLayerValue } from './MockData/DataLayer/DataLayer';
 import CartPopup from './CartPopup';
+import { signOut } from 'firebase/auth';
+import { firebaseAuth } from './firebase';
 
 const Header = () => {
-  const { productState, filterDispatch } = useDataLayerValue();
+  const { productState, filterDispatch, userState, userDispatch } = useDataLayerValue();
   const { carts } = productState;
   const [openCart, setOpenCart] = useState(false);
+
 
   const searchData = (e) => {
     var code = (e.keyCode ? e.keyCode : e.which);
@@ -19,6 +22,13 @@ const Header = () => {
         payload: e.target.value
       })
     }
+  }
+  const logoutHandler = () =>{
+    signOut(firebaseAuth).then(()=>{
+
+    }).catch((error)=>{
+      console.log("error is in logut")
+    })
   }
   return (
     <>
@@ -36,8 +46,13 @@ const Header = () => {
           <span>{carts.length}</span>
 
         </div>
+        <div className='logout__section'>
+          <h2>Welcome: {userState.user?.displayName || userState.user?.email}</h2>
+          <button onClick={logoutHandler}>Logout</button>
+        </div>
       </div>
       {openCart && <CartPopup onClick={() => setOpenCart(!openCart)} />}
+     
     </>
   )
 }
