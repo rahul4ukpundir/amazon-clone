@@ -7,11 +7,13 @@ import { useDataLayerValue } from './MockData/DataLayer/DataLayer';
 import CartPopup from './CartPopup';
 import { signOut } from 'firebase/auth';
 import { firebaseAuth } from './firebase';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const { productState, filterDispatch, userState, userDispatch } = useDataLayerValue();
   const { carts } = productState;
   const [openCart, setOpenCart] = useState(false);
+  const navigate = useNavigate();
 
 
   const searchData = (e) => {
@@ -25,7 +27,7 @@ const Header = () => {
   }
   const logoutHandler = () =>{
     signOut(firebaseAuth).then(()=>{
-
+      navigate("/")
     }).catch((error)=>{
       console.log("error is in logut")
     })

@@ -11,7 +11,7 @@ const SingleProduct = (props) => {
       <img src={props.imageUrl} />
       <div className='product_sumary'>
         <h4>{props.name}</h4>
-        <p>Price: {props.price}</p>
+        <p>Price: {props.price} Rs</p>
         <p>{props.fastDelivery? "Fast Delivery": ""}</p>
         <p><Ratings rating={props.ratings} /></p>
 

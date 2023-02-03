@@ -19,7 +19,7 @@ const CartPopup = ({ onClick }) => {
                                         <img src={cart.imageUrl} />
                                         <div className='cart__item_details'>
                                             <h5>{cart.name}</h5>
-                                            <h6>$ {cart.price}</h6>
+                                            <h6>{cart.price} Rs</h6>
                                         </div>
 
                                         <span onClick={() => dispatch(
@@ -38,7 +38,7 @@ const CartPopup = ({ onClick }) => {
                                 )
                             })
                         }
-                        <Link to="checkout">
+                        <Link to="/checkout">
                             <button className='btn-goToCart'>Go to Cart</button>
                         </Link>
 

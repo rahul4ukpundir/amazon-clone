@@ -1,7 +1,7 @@
 .login__container{
     display: grid;
     place-items: center;
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
 .login__container>img{

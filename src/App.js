@@ -16,48 +16,46 @@ import { useEffect, useState } from "react";
 import Login from "./component/Login";
 import { onAuthStateChanged } from "firebase/auth";
 import { firebaseAuth } from "./firebase";
+import PaymentPage from "./PaymentPage";
 function App() {
   const [isLoggedUser, setLoggedUser] = useState(false);
 
   useEffect(() => {
     onAuthStateChanged(firebaseAuth, (user) => {
-        if(user){
-          setLoggedUser(true)
-        }
-        else{
-          setLoggedUser(false)
-        }
+      if (user) {
+        setLoggedUser(true);
+      } else {
+        setLoggedUser(false);
+      }
     });
   }, []);
 
   return (
     <>
-      {isLoggedUser ? (
-        <BrowserRouter>
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <div className="app_header">
-                  <Header />
-                  <div className="app_body">
-                    <Sidbar />
-                    <Products />
+      <BrowserRouter>
+        <Routes>
+            <>
+            <Route path="/" element={<Login />} />
+              <Route
+              exact
+                path="/home"
+                element={
+                  <div className="app_header">
+                    <Header />
+                    <div className="app_body">
+                      <Sidbar />
+                      <Products />
+                    </div>
                   </div>
-                </div>
-              }
-            />
-            <Route path="/checkout" element={<Carts />} />
-          </Routes>
-        </BrowserRouter>
-      ) : (
-
-        <BrowserRouter>
-        <Login />
-          <Routes></Routes>
-          </BrowserRouter>
+                }
+              />
+              <Route path="/checkout" element={<Carts />} />
+              <Route path="/payment" element={<PaymentPage />} />
+             
+            </>
         
-      )}
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

@@ -1,0 +1,27 @@
+.card__payment{
+   width: 50%;
+   padding: 15px;
+   border: 1px solid #ccc;
+   border-radius: 3px;
+   margin-left:200px;
+   margin-top: 1%;
+   background-color: white
+   
+ }
+
+ .payment__gateway{
+    width: 50%;
+    display: grid;
+    place-items: center;
+    margin-top: 2%;
+    margin-left:200px;
+ }
+
+ .fromClass>form>button{
+    margin-top: 1%;
+    width: 52%;
+    margin-left:200px;
+    font-weight: 600;
+    padding: 10px;
+ }
+
