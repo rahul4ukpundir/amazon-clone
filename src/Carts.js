@@ -67,7 +67,7 @@ const Carts = () => {
                     <Link to ="/payment">
                     <button className='btn__checkout'>Click for Payment</button>
                     </Link>
-                    <Link to ="/home">
+                    <Link to ="/amazon-clone/home">
                     <button className='btn__back'>Back</button>
                     </Link>
 

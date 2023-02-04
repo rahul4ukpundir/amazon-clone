@@ -30,7 +30,7 @@ const Login = () => {
         type: "SET_USER",
         payload: result.user,
       });
-      navigate("/home");
+      navigate("/amazon-clone/home");
     } catch (error) {
       alert("email address and password is incorrect");
       const errorCode = error.code;
@@ -45,7 +45,7 @@ const Login = () => {
         type: "SET_USER",
         payload: result.user,
       });
-      navigate("/home");
+      navigate("/amazon-clone/home");
     } catch (error) {
       alert("email address and password is incorrect");
       const errorCode = error.code;

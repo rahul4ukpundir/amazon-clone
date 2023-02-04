@@ -35,10 +35,10 @@ function App() {
       <BrowserRouter>
         <Routes>
             <>
-            <Route path="/" element={<Login />} />
+            <Route path="/amazon-clone/login" element={<Login />} />
               <Route
               exact
-                path="/home"
+                path="/amazon-clone/"
                 element={
                   <div className="app_header">
                     <Header />
